@@ -1,0 +1,22 @@
+@import "../utils/utils";
+
+@font-face {
+	font-family: Gotham;
+	src: url("https://www.bistroagency.cz/storage/krusovice/kru601_online-kampan-bannery/480x300/assets/fonts/Gotham-Bold.otf");
+	font-weight: bold;
+}
+
+body, h1, p, small, a, span {
+	font-family: Gotham, sans-serif;
+	color: #ffffff;
+	text-transform: uppercase;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+.banner {
+	overflow: hidden;
+}

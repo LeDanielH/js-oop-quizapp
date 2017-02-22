@@ -1,0 +1,50 @@
+{
+  "name": "base-project-template",
+  "version": "0.0.1",
+  "description": "start up project for study or quick edits",
+  "main": "index.js",
+  "config": {
+    "port": "9876"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp",
+    "installNpmPackages": "npm i",
+    "postinstall": "bower install",
+    "prepareLibs": "gulp first-time"
+  },
+  "author": "Daniel Hoksza <daniel.hoksza@gmail.com> (http://ledanielh.github.io/)",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-preset-es2015": "^6.18.0",
+    "browser-sync": "https://registry.npmjs.org/browser-sync/-/browser-sync-2.18.2.tgz",
+    "cross-env": "^3.1.4",
+    "cross-var": "^1.0.2",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-clean-css": "^3.0.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^4.1.0",
+    "gulp-css-purge": "^1.0.27",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-gzip": "^1.4.0",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-jshint": "^2.0.2",
+    "gulp-plumber": "^1.1.0",
+    "gulp-purifycss": "^0.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.9.1",
+    "gulp-strip-css-comments": "^1.2.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "https://registry.npmjs.org/gulp-util/-/gulp-util-3.0.7.tgz",
+    "jshint": "^2.9.4",
+    "npm-run-all": "^4.0.1",
+    "opn-cli": "^3.1.0",
+    "rimraf": "^2.5.4",
+    "run-sequence": "^1.2.2"
+  }
+}

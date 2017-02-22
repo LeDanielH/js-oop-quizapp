@@ -1,0 +1,25 @@
+//$abilities: (
+//	'html': 80,
+//	'css': 80,
+//	'js': 50
+//);
+//
+//@each $ability, $score in $abilities {
+//	@keyframes show-ability-#{$ability} {
+//		from {
+//			width: 0;
+//		}
+//		to {
+//			width: $score * 1%;
+//		}
+//		.ability-#{$ability} {
+//			&:before {
+//				content: '#{score}';
+//			}
+//			&:after {
+//				animation: show-ability-#{$ability} ease-in-out 1s 2s 1;
+//				animation-fill-mode: forwards;
+//			}
+//		}
+//	}
+//}
