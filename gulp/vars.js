@@ -10,8 +10,15 @@ var paths = {
 	deploy: './' + deploy + '/**/*',
 
 	html: {
-		src: devel + '/**/*.html',
+		src: devel + '/**/*.+(html|md)',
 		dest: deploy
+	},
+
+	handlebars: {
+		src: devel + '/**/*.handlebars',
+		partials: devel + 'templates/partials/',
+		dest: deploy,
+		watch: devel + '**/*.handlebars'
 	},
 
 	styles: {
@@ -68,12 +75,17 @@ var paths = {
 
 	data: {
 		images: {
-			src: assetsSrc + '_data/images/**/*.+(png|jpg|svg)',
+			src: assetsSrc + '_data/images/**/*.+(png|jpg|svg|gif)',
 			dest: assetsDest + '_data/images/'
 		},
 		json: {
-			src: assetsSrc + '_data/json/**/*.json',
-			dest: assetsDest + '_data/json/'
+			src: assetsSrc + '_data/json/',
+			dest: assetsDest + '_data/json/',
+			watch: assetsSrc + '_data/json/**/*.json'
+		},
+		fonts: {
+			src: assetsSrc + '_data/fonts/**/*.+(eot|svg|woff|woff2|ttf)',
+			dest: assetsDest + '_data/fonts/'
 		}
 	},
 
