@@ -1,25 +1,122 @@
 {
-	"firstName": "Daniel",
-	"ContractNumberTable1A": "111111",
-	"DebtAmountTable1B": "1 728,00Kč",
-	"ContractNumberTable1C": "&nbsp;",
-	"DebtAmountTable1D": "&nbsp;",
-	"ContractNumberTable2A": "&nbsp;",
-	"DebtAmountTable2B": "&nbsp;",
-	"ContractNumberTable2C": "&nbsp;",
-	"DebtAmountTable2D": "&nbsp;",
-	"DebtAmountLetter": "1 728,00Kč",
-	"VariableSymbol": "12345678",
-	"NameCollector": "Dead Crook",
-	"LetterDate": "24.12.2412",
 	"13": "nenasel jsem",
-	"DebtAmountInLettersA": "tisíc",
-	"DebtAmountInLettersB": "sedmset",
-	"DebtAmountInLettersC": "dvacet osm",
-	"NameFirst": "John",
-	"NameLast": "Doe",
-	"AddressStreet": "Hnidov 123",
-	"AddressZipCode": "123 45",
-	"AddressCity": "Hnedka",
-	"DebtAmountPayslip": "=========1728"
+
+	"ContractNumber": {
+		"Table1A": {
+			"_former": "{1}",
+			"value": "111111"
+		},
+		"Table1C": {
+			"_former": "{3}",
+			"value": "&nbsp;"
+		},
+		"Table2A": {
+			"_former": "{5}",
+			"value": "&nbsp;"
+		},
+		"Table2C": {
+			"_former": "{5}",
+			"value": "&nbsp;"
+		}
+	},
+
+	"Name": {
+		"Collector": {
+			"_former": "{11}",
+			"value": "Dead Crook"
+		},
+		"Adressee": {
+			"First": {
+				"_former": "{17}",
+				"value": "John"
+			},
+			"Last": {
+				"_former": "{18}",
+				"value": "Doe"
+			}
+		}
+	},
+
+	"DebtAmount": {
+		"Table1B": {
+			"_former": "{2}",
+			"value": "1 728,00Kč"
+		},
+		"Table1D": {
+			"_former": "{4}",
+			"value": "&nbsp;"
+		},
+		"Table2B": {
+			"_former": "{6}",
+			"value": "&nbsp;"
+		},
+		"Table2D": {
+			"_former": "{8}",
+			"value": "&nbsp;"
+		},
+		"Letter": {
+			"_former": "{9}",
+			"value": "1 728,00Kč"
+		},
+		"LetterWholeSum": {
+			"_former": "{9:c}",
+			"value": "1 708,00Kč"
+		},
+		"InLettersA": {
+			"_former" : "14",
+			"value": "tisíc"
+		},
+		"InLettersB": {
+			"_former": "{15}",
+			"value": "sedmset"
+		},
+		"InLettersC": {
+			"_former": "{16}",
+			"value": "dvacet osm"
+		},
+		"Payslip": {
+			"_former": "{22}",
+			"value": "=========1728"
+		}
+	},
+
+	"Date": {
+		"LetterSend": {
+			"_former": "{12:d}",
+			"value": "24.12.2412"
+		},
+		"PayUntil": {
+			"_former": "{24:d}",
+			"value": "25.12. 2512"
+		},
+		"AddresseeAcknowledged": {
+			"_former": "{31:d}",
+			"value": "19.9.1999"
+		},
+		"Zesplatneni": {
+			"_former": "{23:d}",
+			"value": "13.3.2003"
+		}
+	},
+
+	"Address": {
+		"Addressee": {
+			"Street": {
+				"_former": "{19}",
+				"value": "Hnidov 123"
+			},
+			"ZipCode": {
+				"_former": "{20}",
+				"value": "123 45"
+			},
+			"City": {
+				"_former": "{21}",
+				"value": "Hnedka"
+			}
+		}
+	},
+	"VariableSymbol": {
+		"_former": "{10}",
+		"value": "12345678"
+	}
 }
