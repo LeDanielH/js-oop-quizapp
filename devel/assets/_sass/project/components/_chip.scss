@@ -1,0 +1,94 @@
+.chip {
+	display: inline-flex;
+	background-color: white;
+	border: 1px solid crimson;
+	height: 35px;
+	@include padding(null $spacing/2);
+	align-items: center;
+	justify-content: center;
+	margin: $spacing/2 $spacing/4;
+	flex: 0 0 auto;
+	&s {
+		border: 1px solid black;
+		&__input {
+			//width: 100%;
+			border: none;
+			outline: none;
+
+			background-color: transparent;
+			height: 35px;
+			//min-width: 100px;
+			@include padding(null $spacing*2);
+			&:hover, &:focus {
+				border: none;
+				outline: none;
+			}
+			&-wrapper {
+				flex: 0 0 auto;
+				margin: $spacing/2 $spacing/4;
+				position: relative;
+
+				&:hover {
+					.chips__input-pencil {
+						color: crimson;
+					}
+				}
+			}
+
+			&::-ms-clear {
+				display: none;
+			}
+
+			&-pencil {
+				@include position(absolute, 50% null null $spacing/2);
+				transform: translateY(-50%);
+				transition: color $duration ease;
+			}
+		}
+		&__wrapper {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+		}
+
+		&__container {
+			display: flex;
+			align-items: center;
+			flex: 0 0 auto;
+			flex-wrap: wrap;
+			@include padding(null $spacing/4);
+			width: 100%;
+			min-height: 52px;
+			position: relative;
+		}
+	}
+
+	&__content {
+		white-space: nowrap;
+		display: inline-block;
+		line-height: 1;
+		margin: 0;
+	}
+
+	&__close {
+		display: inline-block;
+		cursor: pointer;
+		i {
+			color: crimson;
+			padding: $spacing/4;
+			transition: transform $duration ease;
+			cursor: pointer;
+		}
+		&:hover {
+			i {
+				transform: rotate(45deg);
+			}
+		}
+	}
+}
+
+input {
+	&::-ms-clear {
+		display: none;
+	}
+}
