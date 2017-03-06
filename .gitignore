@@ -11,8 +11,6 @@ devel/.jekyll-metadata
 devel/assets/generated
 devel/assets/offline
 
-devel/assets/_sass/utils
-
 devel/_pages/**/*.css
 devel/_pages/**/*.min.css
 devel/_pages/**/*.min.css.gz
