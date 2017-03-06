@@ -19,7 +19,7 @@ gulp.task('process-html', [], function() {
 });
 
 gulp.task('process-handlebars', [], function() {
-	var letterObject = JSON.parse(fs.readFileSync(vars.paths.data.json.src + 'letter.json', 'utf8')); // get data for the letter
+	var letterObject = JSON.parse(fs.readFileSync(vars.paths.data.json.src + 'handlebars.json', 'utf8'));
 	var letterObjectNoComments = {};
 	var comment = "_former"
 	function filterObject(obj,newObj) {

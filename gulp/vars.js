@@ -51,6 +51,14 @@ var paths = {
 		normalize: {
 			src: bower + 'normalize-scss/**/*.+(scss|sass)',
 			dest: assetsSrc + '_sass/utils/normalize/'
+		},
+		fontAwesome: {
+			src: bower + 'font-awesome/scss/**/*.+(scss|sass)',
+			dest: assetsSrc + '_sass/utils/font-awesome/'
+		},
+		fontAwesomeFont: {
+			src: bower + 'font-awesome/fonts/**/*.+(eot|svg|woff|woff2|ttf)',
+			dest: assetsSrc + '_data/fonts/font-awesome/'
 		}
 	},
 

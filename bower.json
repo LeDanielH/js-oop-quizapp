@@ -17,9 +17,9 @@
   ],
   "dependencies": {
     "jquery": "^3.1.1",
-    "bourbon": "^4.2.7",
     "normalize-scss": "^3.0.3",
-    "bitters": "^1.5.0"
+    "bitters": "^1.5.0",
+    "font-awesome": "Font-Awesome#^4.7.0"
   },
   "resolutions": {
     "normalize-scss": "^6.0.0",
