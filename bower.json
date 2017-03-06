@@ -18,9 +18,11 @@
   "dependencies": {
     "jquery": "^3.1.1",
     "bourbon": "^4.2.7",
-    "normalize-scss": "^3.0.3"
+    "normalize-scss": "^3.0.3",
+    "bitters": "^1.5.0"
   },
   "resolutions": {
-    "normalize-scss": "^6.0.0"
+    "normalize-scss": "^6.0.0",
+    "bourbon": "v5.0.0.beta.7"
   }
 }

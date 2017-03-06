@@ -41,11 +41,15 @@ var paths = {
 	sassUtils: {
 
 		bourbon: {
-			src: bower + 'bourbon/app/assets/stylesheets/**/*.+(scss|sass)',
+			src: bower + 'bourbon/core/**/*.+(scss|sass)',
 			dest: assetsSrc + '_sass/utils/bourbon/'
 		},
+		bitters: {
+			src: bower + 'bitters/core/**/*.+(scss|sass)',
+			dest: assetsSrc + '_sass/utils/bitters/'
+		},
 		normalize: {
-			src: bower + 'normalize-scss/sass/**/*.+(scss|sass)',
+			src: bower + 'normalize-scss/**/*.+(scss|sass)',
 			dest: assetsSrc + '_sass/utils/normalize/'
 		}
 	},
