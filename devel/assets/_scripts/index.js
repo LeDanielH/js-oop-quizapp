@@ -1,2 +1,3 @@
-var name = 'Daniel';
-console.log('Hello ' + name);
+$(function() {
+	Chip.init();
+});

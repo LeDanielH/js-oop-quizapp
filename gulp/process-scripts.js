@@ -11,8 +11,8 @@ var vars = require('./vars'),
 
 gulp.task('process-scripts', function() {
 	return gulp.src([
-		vars.paths.scripts.all.src + 'index.js'
-		// vars.paths.scripts.all.src + '**/*.js'
+		vars.paths.scripts.all.src + 'index.js',
+		vars.paths.scripts.all.src + 'components/*.js'
 	])
 	.pipe(plumber())
 	.pipe(sourcemaps.init())
@@ -28,7 +28,6 @@ gulp.task('process-scripts', function() {
 
 gulp.task('process-scripts-prod', function() {
 	return gulp.src([vars.paths.scripts.all.dest + 'scripts.js',])
-	.pipe(duplicate({suffix: '.min'}))
 	.pipe(uglifyJs())
 	.pipe(gulp.dest(vars.paths.scripts.all.dest))
 });
