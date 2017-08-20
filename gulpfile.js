@@ -20,17 +20,7 @@ gulp.task('watch', function() {
 	gulp.watch(vars.paths.handlebars.watch, ['process-handlebars']);
 });
 
-gulp.task('default', function(done) {
-	sequence(
-		'process-styles',
-		'process-scripts',
-		'process-handlebars',
-		// 'process-json',
-		'process-images',
-		'process-fonts',
-		['localServer','watch'],
-		done);
-});
+require('./gulp/process-styles');
 
 gulp.task('first-time', function(done) {
 	sequence('clean', ['prepare-libs'], done);
