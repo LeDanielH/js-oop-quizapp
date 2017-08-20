@@ -1,20 +1,16 @@
-var vars = require('./vars');
-var gulp = require('gulp');
-var del = require('del');
+const vars = require('./vars');
+const gulp = require('gulp');
+const del = require('del');
 
 gulp.task('clean', function () {
-	return del([
-		vars.paths.deploy
-	], {
+	let itemsToBeDeleted = [];
+	for(let item in vars.paths.delete) {
+		if (!vars.paths.delete.hasOwnProperty(item)) continue;
+		itemsToBeDeleted.push(vars.paths.delete[item]);
+	}
+	console.log(itemsToBeDeleted + ' will be deleted');
+	return del(itemsToBeDeleted, {
 		force: true
 	});
 });
 
-gulp.task('clean-dev', function () {
-	return del([
-		'devel/assets/generated/main.css',
-		'devel/assets/generated/scripts.js'
-	], {
-		force: true
-	});
-});

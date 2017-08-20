@@ -1,4 +1,4 @@
-var vars = require('./vars'),
+const vars = require('./vars'),
 	gulp = require('gulp'),
 	gzip = require('gulp-gzip'),
 	concat = require('gulp-concat'),

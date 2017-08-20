@@ -1,41 +1,46 @@
-var vars = require('./vars');
-var gulp = require('gulp');
-var plumber = require('gulp-plumber');
-var sourcemaps = require('gulp-sourcemaps');
-var autoprefixer = require('gulp-autoprefixer');
-var duplicate = require('gulp-rename');
-var localServer = require('gulp-connect');
-var processSass = require('gulp-sass');
-var cleanCss = require('gulp-clean-css');
-var purgeCss = require('gulp-css-purge');
-var stripCssComments = require('gulp-strip-css-comments');
-var purifyCss = require('gulp-purifycss');
+const vars = require('./vars');
+const gulp = require('gulp');
+const plumber = require('gulp-plumber');
+const sourcemaps = require('gulp-sourcemaps');
+const autoprefixer = require('gulp-autoprefixer');
+const localServer = require('gulp-connect');
+const processSass = require('gulp-sass');
+const cleanCss = require('gulp-clean-css');
+const purgeCss = require('gulp-css-purge');
+const stripCssComments = require('gulp-strip-css-comments');
 
-gulp.task('process-styles', [], function() {
-	return gulp.src([vars.paths.styles.all.src])
-		.pipe(plumber())
-		.pipe(sourcemaps.init())
-		.pipe(processSass({
-			outputStyle: 'expanded'
-		}).on('error', processSass.logError))
-		.pipe(sourcemaps.write())
-		.pipe(autoprefixer({
-			cascade: false,
-			browsers: ['ie >= 10']
-		}))
-		.pipe(gulp.dest(vars.paths.styles.all.dest))
-		.pipe(localServer.reload());
-});
+const Styles = {
+	processProd: function () {
+		return gulp.src([vars.paths.styles.src])
+			.pipe(plumber())
+			.pipe(processSass({
+				outputStyle: 'expanded'
+			}).on('error', processSass.logError))
+			.pipe(autoprefixer({
+				cascade: false,
+				browsers: ['ie >= 8', 'Firefox > 10', 'Chrome > 10']
+			}))
+			.pipe(stripCssComments())
+			.pipe(purgeCss())
+			.pipe(cleanCss())
+			.pipe(gulp.dest(vars.paths.styles.dest))
+	},
+	processDevel:function () {
+		return gulp.src([vars.paths.styles.src])
+			.pipe(plumber())
+			.pipe(sourcemaps.init())
+			.pipe(processSass({
+				outputStyle: 'expanded'
+			}).on('error', processSass.logError))
+			.pipe(sourcemaps.write())
+			.pipe(autoprefixer({
+				cascade: false,
+				browsers: ['ie >= 8', 'Firefox > 10', 'Chrome > 10']
+			}))
+			.pipe(gulp.dest(vars.paths.styles.dest))
+			.pipe(localServer.reload());
+	}
+};
 
-gulp.task('process-styles-prod', [], function() {
-	return gulp.src([vars.paths.styles.all.dest + 'main.css'])
-		.pipe(stripCssComments())
-		.pipe(purgeCss())
-		.pipe(purifyCss([
-			vars.paths.scripts.all.dest + '**/.js', // todo preprod -> prod
-			vars.paths.html.dest + '**/*.html'
-		]))
-		.pipe(cleanCss())
-		.pipe(duplicate({suffix: '.min'}))
-		.pipe(gulp.dest(vars.paths.styles.all.dest))
-});
+gulp.task('process-styles', [], Styles.processDevel);
+gulp.task('process-styles-prod', [], Styles.processProd);

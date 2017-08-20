@@ -1,4 +1,4 @@
-var vars = require('./vars'),
+const vars = require('./vars'),
 	gulp = require('gulp'),
 	localServer = require('gulp-connect'),
 	browserSync = require('browser-sync').create(),
@@ -13,6 +13,7 @@ gulp.task('localServer', function () {
 	browserSync.init({
 		files: [vars.paths.html.dest + '/**'],
 		port: 9876,
+		online: true,
 		server: {
 			baseDir: vars.paths.html.dest
 		}
